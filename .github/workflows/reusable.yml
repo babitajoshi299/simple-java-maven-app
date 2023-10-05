@@ -1,0 +1,18 @@
+name: Reusable Workflow
+
+ 
+
+on:
+  workflow_run:
+    workflows: ["Main Pipeline"]
+    types:
+      - completed
+
+jobs:
+  print-variable:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Run Custom Action
+       uses: .github/actions/print_env_var/customaction.yml@latest
+       with:
+         variable-to-print: ${{ github.event.workflow_run.conclusions."Main Pipeline".outputs.print-vars }}
