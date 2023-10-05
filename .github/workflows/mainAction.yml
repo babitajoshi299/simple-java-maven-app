@@ -74,10 +74,10 @@ jobs:
           BUILD_TECH: ${{ env.BUILD_TECH }}
 
 
-  Job2:
-    uses: nihar30/simple-java-maven-app/.github/workflows/checkmarx-analysis.yml@master
-    needs: Jab1
-    with: 
-      proj_name: 'GithubActionTest'
-      teams_path: '\CxServer\SP\Checkmarx'
+ # Job2:
+  #  uses: nihar30/simple-java-maven-app/.github/workflows/checkmarx-analysis.yml@master
+   # needs: Jab1
+    #with: 
+     # proj_name: 'GithubActionTest'
+      #teams_path: '\CxServer\SP\Checkmarx'
           
