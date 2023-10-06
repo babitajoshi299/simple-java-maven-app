@@ -1,28 +1,13 @@
-name: print_env_var
-decription: printing the environment variables
-inputs:
-    STACK: 
-      description: "technology stack"
-      required: true
-      default: "java"
-    BUILD_TECH: 
-      description: "build tech"
-      required: false
-      default: "java_ant"
+name: Print Variable
 
-runs:
-  using: "composite"
-  steps:
-    - name: print 
-      shell: bash
-      run: |
-          echo ${{ inputs.STACK }}
+ 
 
-    - name: call sh
-      shell: bash
-      working-directory: ${{ github.action_path }}
-      run: |
-        ls
-        chmod 744 test.sh
-        bash test.sh ${{ inputs.STACK }} ${{ inputs.BUILD_TECH }}
-        
+inputs: 
+  variable-to-print: 
+    description: The variable you want to print
+    required: true
+    default: '${{ github.sha }}'
+
+runs: 
+using: shell
+command: 'echo "${{ inputs.variable-to-print }}"'
