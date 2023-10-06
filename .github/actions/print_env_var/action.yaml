@@ -1,7 +1,6 @@
 name: Print Variable
 
  
-
 inputs: 
   variable-to-print: 
     description: The variable you want to print
