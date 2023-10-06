@@ -18,3 +18,6 @@ jobs:
 
     steps:
     - uses: babitajoshi299/simple-java-maven-app/.github/workflows/reusable.yml@master
+
+    #steps:
+    - uses: babitajoshi299/simple-java-maven-app/.github/actions/print_env_var/action.yaml@master
