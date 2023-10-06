@@ -1,6 +1,6 @@
 name: Print Variable
 
- 
+
 
 inputs: 
   variable-to-print: 
