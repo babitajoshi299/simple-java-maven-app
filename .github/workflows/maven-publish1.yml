@@ -35,3 +35,7 @@ jobs:
             name: Jars
             path: /home/runner/work/java-junit-template-project/java-junit-template-project/lib/org.jacoco.ant-0.8.7.jar!/org/jacoco/ant/antlib.xml
             
+    - name: Print Variables
+      uses: babitajoshi299/simple-java-maven-app/.github/actions/print_env_var/customaction.yml@master
+      with:
+         variable-to-print: ${{ github.sha }}
