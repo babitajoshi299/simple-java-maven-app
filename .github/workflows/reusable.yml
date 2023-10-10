@@ -33,6 +33,8 @@ jobs:
       uses: actions/upload-artifact@v2.2.3
       with:
             name: Jars
-            path: /home/runner/work/java-junit-template-project/java-junit-template-project/lib/org.jacoco.ant-0.8.7.jar!/org/jacoco/ant/antlib.xml
+            path: /home/runner/work/java-junit-template-project/java-junit-template-project/lib/org.jacoco.ant-0.8.7.jar!/org/jacoco/ant/antlib.xml 
+            
+    - name: action being called here 
     - uses: babitajoshi299/simple-java-maven-app/.github/actions/print_env_var@master   
     #- uses: babitajoshi299/simple-java-maven-app/.github/actions/print_env_var/action.yml@master
