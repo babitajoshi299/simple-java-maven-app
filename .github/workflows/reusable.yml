@@ -36,4 +36,6 @@ jobs:
             path: /home/runner/work/java-junit-template-project/java-junit-template-project/lib/org.jacoco.ant-0.8.7.jar!/org/jacoco/ant/antlib.xml 
             
     - name: action being called here 
+       run:|
       uses: babitajoshi299/simple-java-maven-app/.github/actions/print_env_var@master
+  
